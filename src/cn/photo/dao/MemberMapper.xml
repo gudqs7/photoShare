@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.photo.dao.MemberMapper">
+	<resultMap id="BaseResultMap" type="cn.photo.entity.Member">
+		<id column="uid" property="uid" jdbcType="OTHER" />
+		<result column="nickName" property="nickname" jdbcType="OTHER" />
+		<result column="sex" property="sex" jdbcType="OTHER" />
+		<result column="phone" property="phone" jdbcType="OTHER" />
+		<result column="pwd" property="pwd" jdbcType="OTHER" />
+		<result column="registTime" property="registtime" jdbcType="OTHER" />
+	</resultMap>
+	<sql id="Example_Where_Clause">
+		<where>
+			<foreach collection="example.oredCriteria" item="criteria"
+				separator="or">
+				<if test="criteria.valid">
+					<trim prefix="(" suffix=")" prefixOverrides="and">
+						<foreach collection="criteria.criteria" item="criterion">
+							<choose>
+								<when test="criterion.noValue">
+									and ${criterion.condition}
+								</when>
+								<when test="criterion.singleValue">
+									and ${criterion.condition} #{criterion.value}
+								</when>
+								<when test="criterion.betweenValue">
+									and ${criterion.condition} #{criterion.value} and
+									#{criterion.secondValue}
+								</when>
+								<when test="criterion.listValue">
+									and ${criterion.condition}
+									<foreach collection="criterion.value" item="listItem"
+										open="(" close=")" separator=",">
+										#{listItem}
+									</foreach>
+								</when>
+							</choose>
+						</foreach>
+					</trim>
+				</if>
+			</foreach>
+		</where>
+	</sql>
+	<sql id="Update_By_Example_Where_Clause">
+		<where>
+			<foreach collection="example.oredCriteria" item="criteria"
+				separator="or">
+				<if test="criteria.valid">
+					<trim prefix="(" suffix=")" prefixOverrides="and">
+						<foreach collection="criteria.criteria" item="criterion">
+							<choose>
+								<when test="criterion.noValue">
+									and ${criterion.condition}
+								</when>
+								<when test="criterion.singleValue">
+									and ${criterion.condition} #{criterion.value}
+								</when>
+								<when test="criterion.betweenValue">
+									and ${criterion.condition} #{criterion.value} and
+									#{criterion.secondValue}
+								</when>
+								<when test="criterion.listValue">
+									and ${criterion.condition}
+									<foreach collection="criterion.value" item="listItem"
+										open="(" close=")" separator=",">
+										#{listItem}
+									</foreach>
+								</when>
+							</choose>
+						</foreach>
+					</trim>
+				</if>
+			</foreach>
+		</where>
+	</sql>
+	<sql id="Base_Column_List">
+		uid, nickName, sex, phone, pwd, registTime
+	</sql>
+	<select id="selectByExample" resultMap="BaseResultMap"
+		parameterType="cn.photo.entity.MemberExample">
+		select
+		<if test="example.distinct">
+			distinct
+		</if>
+		<include refid="Base_Column_List" />
+		from Member
+		<if test="example != null">
+			<include refid="Example_Where_Clause" />
+		</if>
+		<if test="example.orderByClause != null">
+			order by ${orderByClause}
+		</if>
+	</select>
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.Integer">
+		select
+		<include refid="Base_Column_List" />
+		from Member
+		where uid = #{uid,jdbcType=OTHER}
+	</select>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+		delete from Member
+		where uid = #{uid,jdbcType=OTHER}
+	</delete>
+	<delete id="deleteByExample" parameterType="cn.photo.entity.MemberExample">
+		delete from Member
+		<if test="example != null">
+			<include refid="Example_Where_Clause" />
+		</if>
+	</delete>
+	<insert id="insert" parameterType="cn.photo.entity.Member">
+		insert into Member (uid, nickName, sex,
+		phone, pwd, registTime)
+		values (#{uid,jdbcType=OTHER}, #{nickname,jdbcType=OTHER},
+		#{sex,jdbcType=OTHER},
+		#{phone,jdbcType=OTHER}, #{pwd,jdbcType=OTHER}, #{registtime,jdbcType=OTHER})
+	</insert>
+	<insert id="insertSelective" parameterType="cn.photo.entity.Member">
+		insert into Member
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="uid != null">
+				uid,
+			</if>
+			<if test="nickname != null">
+				nickName,
+			</if>
+			<if test="sex != null">
+				sex,
+			</if>
+			<if test="phone != null">
+				phone,
+			</if>
+			<if test="pwd != null">
+				pwd,
+			</if>
+			<if test="registtime != null">
+				registTime,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="uid != null">
+				#{uid,jdbcType=OTHER},
+			</if>
+			<if test="nickname != null">
+				#{nickname,jdbcType=OTHER},
+			</if>
+			<if test="sex != null">
+				#{sex,jdbcType=OTHER},
+			</if>
+			<if test="phone != null">
+				#{phone,jdbcType=OTHER},
+			</if>
+			<if test="pwd != null">
+				#{pwd,jdbcType=OTHER},
+			</if>
+			<if test="registtime != null">
+				#{registtime,jdbcType=OTHER},
+			</if>
+		</trim>
+	</insert>
+	<select id="countByExample" parameterType="cn.photo.entity.MemberExample"
+		resultType="java.lang.Integer">
+		select count(*) from Member
+		<if test="example != null">
+			<include refid="Example_Where_Clause" />
+		</if>
+	</select>
+	<update id="updateByExampleSelective" parameterType="map">
+		update Member
+		<set>
+			<if test="record.uid != null">
+				uid = #{record.uid,jdbcType=OTHER},
+			</if>
+			<if test="record.nickname != null">
+				nickName = #{record.nickname,jdbcType=OTHER},
+			</if>
+			<if test="record.sex != null">
+				sex = #{record.sex,jdbcType=OTHER},
+			</if>
+			<if test="record.phone != null">
+				phone = #{record.phone,jdbcType=OTHER},
+			</if>
+			<if test="record.pwd != null">
+				pwd = #{record.pwd,jdbcType=OTHER},
+			</if>
+			<if test="record.registtime != null">
+				registTime = #{record.registtime,jdbcType=OTHER},
+			</if>
+		</set>
+		<if test="_parameter != null">
+			<include refid="Update_By_Example_Where_Clause" />
+		</if>
+	</update>
+	<update id="updateByExample" parameterType="map">
+		update Member
+		set uid = #{record.uid,jdbcType=OTHER},
+		nickName = #{record.nickname,jdbcType=OTHER},
+		sex = #{record.sex,jdbcType=OTHER},
+		phone = #{record.phone,jdbcType=OTHER},
+		pwd = #{record.pwd,jdbcType=OTHER},
+		registTime = #{record.registtime,jdbcType=OTHER}
+		<if test="_parameter != null">
+			<include refid="Update_By_Example_Where_Clause" />
+		</if>
+	</update>
+	<update id="updateByPrimaryKeySelective" parameterType="cn.photo.entity.Member">
+		update Member
+		<set>
+			<if test="nickname != null">
+				nickName = #{nickname,jdbcType=OTHER},
+			</if>
+			<if test="sex != null">
+				sex = #{sex,jdbcType=OTHER},
+			</if>
+			<if test="phone != null">
+				phone = #{phone,jdbcType=OTHER},
+			</if>
+			<if test="pwd != null">
+				pwd = #{pwd,jdbcType=OTHER},
+			</if>
+			<if test="registtime != null">
+				registTime = #{registtime,jdbcType=OTHER},
+			</if>
+		</set>
+		where uid = #{uid,jdbcType=OTHER}
+	</update>
+	<update id="updateByPrimaryKey" parameterType="cn.photo.entity.Member">
+		update Member
+		set nickName = #{nickname,jdbcType=OTHER},
+		sex = #{sex,jdbcType=OTHER},
+		phone = #{phone,jdbcType=OTHER},
+		pwd = #{pwd,jdbcType=OTHER},
+		registTime = #{registtime,jdbcType=OTHER}
+		where uid = #{uid,jdbcType=OTHER}
+	</update>
+</mapper>

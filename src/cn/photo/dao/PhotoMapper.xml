@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.photo.dao.PhotoMapper" >
+  <resultMap id="BaseResultMap" type="cn.photo.entity.Photo" >
+    <id column="pid" property="pid" jdbcType="OTHER" />
+    <result column="albumid" property="albumid" jdbcType="OTHER" />
+    <result column="location" property="location" jdbcType="OTHER" />
+    <result column="addTime" property="addtime" jdbcType="OTHER" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    pid, albumid, location, addTime
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="cn.photo.entity.PhotoExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from photo
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from photo
+    where pid = #{pid,jdbcType=OTHER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from photo
+    where pid = #{pid,jdbcType=OTHER}
+  </delete>
+  <delete id="deleteByExample" parameterType="cn.photo.entity.PhotoExample" >
+    delete from photo
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="cn.photo.entity.Photo" >
+    insert into photo (pid, albumid, location, 
+      addTime)
+    values (#{pid,jdbcType=OTHER}, #{albumid,jdbcType=OTHER}, #{location,jdbcType=OTHER}, 
+      #{addtime,jdbcType=OTHER})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.photo.entity.Photo" >
+    insert into photo
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="pid != null" >
+        pid,
+      </if>
+      <if test="albumid != null" >
+        albumid,
+      </if>
+      <if test="location != null" >
+        location,
+      </if>
+      <if test="addtime != null" >
+        addTime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="pid != null" >
+        #{pid,jdbcType=OTHER},
+      </if>
+      <if test="albumid != null" >
+        #{albumid,jdbcType=OTHER},
+      </if>
+      <if test="location != null" >
+        #{location,jdbcType=OTHER},
+      </if>
+      <if test="addtime != null" >
+        #{addtime,jdbcType=OTHER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="cn.photo.entity.PhotoExample" resultType="java.lang.Integer" >
+    select count(*) from photo
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update photo
+    <set >
+      <if test="record.pid != null" >
+        pid = #{record.pid,jdbcType=OTHER},
+      </if>
+      <if test="record.albumid != null" >
+        albumid = #{record.albumid,jdbcType=OTHER},
+      </if>
+      <if test="record.location != null" >
+        location = #{record.location,jdbcType=OTHER},
+      </if>
+      <if test="record.addtime != null" >
+        addTime = #{record.addtime,jdbcType=OTHER},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update photo
+    set pid = #{record.pid,jdbcType=OTHER},
+      albumid = #{record.albumid,jdbcType=OTHER},
+      location = #{record.location,jdbcType=OTHER},
+      addTime = #{record.addtime,jdbcType=OTHER}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.photo.entity.Photo" >
+    update photo
+    <set >
+      <if test="albumid != null" >
+        albumid = #{albumid,jdbcType=OTHER},
+      </if>
+      <if test="location != null" >
+        location = #{location,jdbcType=OTHER},
+      </if>
+      <if test="addtime != null" >
+        addTime = #{addtime,jdbcType=OTHER},
+      </if>
+    </set>
+    where pid = #{pid,jdbcType=OTHER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.photo.entity.Photo" >
+    update photo
+    set albumid = #{albumid,jdbcType=OTHER},
+      location = #{location,jdbcType=OTHER},
+      addTime = #{addtime,jdbcType=OTHER}
+    where pid = #{pid,jdbcType=OTHER}
+  </update>
+</mapper>

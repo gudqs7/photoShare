@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.photo.dao.CollectionMapper" >
+  <resultMap id="BaseResultMap" type="cn.photo.entity.Collection" >
+    <id column="coid" property="coid" jdbcType="OTHER" />
+    <result column="albumid" property="albumid" jdbcType="OTHER" />
+    <result column="userid" property="userid" jdbcType="OTHER" />
+    <result column="collectdate" property="collectdate" jdbcType="OTHER" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    coid, albumid, userid, collectdate
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="cn.photo.entity.CollectionExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from collection
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from collection
+    where coid = #{coid,jdbcType=OTHER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from collection
+    where coid = #{coid,jdbcType=OTHER}
+  </delete>
+  <delete id="deleteByExample" parameterType="cn.photo.entity.CollectionExample" >
+    delete from collection
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="cn.photo.entity.Collection" >
+    insert into collection (coid, albumid, userid, 
+      collectdate)
+    values (#{coid,jdbcType=OTHER}, #{albumid,jdbcType=OTHER}, #{userid,jdbcType=OTHER}, 
+      #{collectdate,jdbcType=OTHER})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.photo.entity.Collection" >
+    insert into collection
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="coid != null" >
+        coid,
+      </if>
+      <if test="albumid != null" >
+        albumid,
+      </if>
+      <if test="userid != null" >
+        userid,
+      </if>
+      <if test="collectdate != null" >
+        collectdate,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="coid != null" >
+        #{coid,jdbcType=OTHER},
+      </if>
+      <if test="albumid != null" >
+        #{albumid,jdbcType=OTHER},
+      </if>
+      <if test="userid != null" >
+        #{userid,jdbcType=OTHER},
+      </if>
+      <if test="collectdate != null" >
+        #{collectdate,jdbcType=OTHER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="cn.photo.entity.CollectionExample" resultType="java.lang.Integer" >
+    select count(*) from collection
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update collection
+    <set >
+      <if test="record.coid != null" >
+        coid = #{record.coid,jdbcType=OTHER},
+      </if>
+      <if test="record.albumid != null" >
+        albumid = #{record.albumid,jdbcType=OTHER},
+      </if>
+      <if test="record.userid != null" >
+        userid = #{record.userid,jdbcType=OTHER},
+      </if>
+      <if test="record.collectdate != null" >
+        collectdate = #{record.collectdate,jdbcType=OTHER},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update collection
+    set coid = #{record.coid,jdbcType=OTHER},
+      albumid = #{record.albumid,jdbcType=OTHER},
+      userid = #{record.userid,jdbcType=OTHER},
+      collectdate = #{record.collectdate,jdbcType=OTHER}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.photo.entity.Collection" >
+    update collection
+    <set >
+      <if test="albumid != null" >
+        albumid = #{albumid,jdbcType=OTHER},
+      </if>
+      <if test="userid != null" >
+        userid = #{userid,jdbcType=OTHER},
+      </if>
+      <if test="collectdate != null" >
+        collectdate = #{collectdate,jdbcType=OTHER},
+      </if>
+    </set>
+    where coid = #{coid,jdbcType=OTHER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.photo.entity.Collection" >
+    update collection
+    set albumid = #{albumid,jdbcType=OTHER},
+      userid = #{userid,jdbcType=OTHER},
+      collectdate = #{collectdate,jdbcType=OTHER}
+    where coid = #{coid,jdbcType=OTHER}
+  </update>
+</mapper>

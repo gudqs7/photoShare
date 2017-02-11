@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.photo.dao.AlbumMapper" >
+  <resultMap id="BaseResultMap" type="cn.photo.entity.Album" >
+    <id column="aid" property="aid" jdbcType="OTHER" />
+    <result column="userid" property="userid" jdbcType="OTHER" />
+    <result column="albumdesc" property="albumdesc" jdbcType="OTHER" />
+    <result column="photoid" property="photoid" jdbcType="OTHER" />
+    <result column="typeid" property="typeid" jdbcType="OTHER" />
+    <result column="totallook" property="totallook" jdbcType="OTHER" />
+    <result column="相册点赞总数" property="相册点赞总数" jdbcType="OTHER" />
+    <result column="isopen" property="isopen" jdbcType="OTHER" />
+    <result column="addTime" property="addtime" jdbcType="OTHER" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    aid, userid, albumdesc, photoid, typeid, totallook, 相册点赞总数, isopen, addTime
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="cn.photo.entity.AlbumExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from album
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from album
+    where aid = #{aid,jdbcType=OTHER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from album
+    where aid = #{aid,jdbcType=OTHER}
+  </delete>
+  <delete id="deleteByExample" parameterType="cn.photo.entity.AlbumExample" >
+    delete from album
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="cn.photo.entity.Album" >
+    insert into album (aid, userid, albumdesc, 
+      photoid, typeid, totallook, 
+      相册点赞总数, isopen, addTime)
+    values (#{aid,jdbcType=OTHER}, #{userid,jdbcType=OTHER}, #{albumdesc,jdbcType=OTHER}, 
+      #{photoid,jdbcType=OTHER}, #{typeid,jdbcType=OTHER}, #{totallook,jdbcType=OTHER}, 
+      #{相册点赞总数,jdbcType=OTHER}, #{isopen,jdbcType=OTHER}, #{addtime,jdbcType=OTHER})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.photo.entity.Album" >
+    insert into album
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="aid != null" >
+        aid,
+      </if>
+      <if test="userid != null" >
+        userid,
+      </if>
+      <if test="albumdesc != null" >
+        albumdesc,
+      </if>
+      <if test="photoid != null" >
+        photoid,
+      </if>
+      <if test="typeid != null" >
+        typeid,
+      </if>
+      <if test="totallook != null" >
+        totallook,
+      </if>
+      <if test="相册点赞总数 != null" >
+        相册点赞总数,
+      </if>
+      <if test="isopen != null" >
+        isopen,
+      </if>
+      <if test="addtime != null" >
+        addTime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="aid != null" >
+        #{aid,jdbcType=OTHER},
+      </if>
+      <if test="userid != null" >
+        #{userid,jdbcType=OTHER},
+      </if>
+      <if test="albumdesc != null" >
+        #{albumdesc,jdbcType=OTHER},
+      </if>
+      <if test="photoid != null" >
+        #{photoid,jdbcType=OTHER},
+      </if>
+      <if test="typeid != null" >
+        #{typeid,jdbcType=OTHER},
+      </if>
+      <if test="totallook != null" >
+        #{totallook,jdbcType=OTHER},
+      </if>
+      <if test="相册点赞总数 != null" >
+        #{相册点赞总数,jdbcType=OTHER},
+      </if>
+      <if test="isopen != null" >
+        #{isopen,jdbcType=OTHER},
+      </if>
+      <if test="addtime != null" >
+        #{addtime,jdbcType=OTHER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="cn.photo.entity.AlbumExample" resultType="java.lang.Integer" >
+    select count(*) from album
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update album
+    <set >
+      <if test="record.aid != null" >
+        aid = #{record.aid,jdbcType=OTHER},
+      </if>
+      <if test="record.userid != null" >
+        userid = #{record.userid,jdbcType=OTHER},
+      </if>
+      <if test="record.albumdesc != null" >
+        albumdesc = #{record.albumdesc,jdbcType=OTHER},
+      </if>
+      <if test="record.photoid != null" >
+        photoid = #{record.photoid,jdbcType=OTHER},
+      </if>
+      <if test="record.typeid != null" >
+        typeid = #{record.typeid,jdbcType=OTHER},
+      </if>
+      <if test="record.totallook != null" >
+        totallook = #{record.totallook,jdbcType=OTHER},
+      </if>
+      <if test="record.相册点赞总数 != null" >
+        相册点赞总数 = #{record.相册点赞总数,jdbcType=OTHER},
+      </if>
+      <if test="record.isopen != null" >
+        isopen = #{record.isopen,jdbcType=OTHER},
+      </if>
+      <if test="record.addtime != null" >
+        addTime = #{record.addtime,jdbcType=OTHER},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update album
+    set aid = #{record.aid,jdbcType=OTHER},
+      userid = #{record.userid,jdbcType=OTHER},
+      albumdesc = #{record.albumdesc,jdbcType=OTHER},
+      photoid = #{record.photoid,jdbcType=OTHER},
+      typeid = #{record.typeid,jdbcType=OTHER},
+      totallook = #{record.totallook,jdbcType=OTHER},
+      相册点赞总数 = #{record.相册点赞总数,jdbcType=OTHER},
+      isopen = #{record.isopen,jdbcType=OTHER},
+      addTime = #{record.addtime,jdbcType=OTHER}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.photo.entity.Album" >
+    update album
+    <set >
+      <if test="userid != null" >
+        userid = #{userid,jdbcType=OTHER},
+      </if>
+      <if test="albumdesc != null" >
+        albumdesc = #{albumdesc,jdbcType=OTHER},
+      </if>
+      <if test="photoid != null" >
+        photoid = #{photoid,jdbcType=OTHER},
+      </if>
+      <if test="typeid != null" >
+        typeid = #{typeid,jdbcType=OTHER},
+      </if>
+      <if test="totallook != null" >
+        totallook = #{totallook,jdbcType=OTHER},
+      </if>
+      <if test="相册点赞总数 != null" >
+        相册点赞总数 = #{相册点赞总数,jdbcType=OTHER},
+      </if>
+      <if test="isopen != null" >
+        isopen = #{isopen,jdbcType=OTHER},
+      </if>
+      <if test="addtime != null" >
+        addTime = #{addtime,jdbcType=OTHER},
+      </if>
+    </set>
+    where aid = #{aid,jdbcType=OTHER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.photo.entity.Album" >
+    update album
+    set userid = #{userid,jdbcType=OTHER},
+      albumdesc = #{albumdesc,jdbcType=OTHER},
+      photoid = #{photoid,jdbcType=OTHER},
+      typeid = #{typeid,jdbcType=OTHER},
+      totallook = #{totallook,jdbcType=OTHER},
+      相册点赞总数 = #{相册点赞总数,jdbcType=OTHER},
+      isopen = #{isopen,jdbcType=OTHER},
+      addTime = #{addtime,jdbcType=OTHER}
+    where aid = #{aid,jdbcType=OTHER}
+  </update>
+</mapper>
