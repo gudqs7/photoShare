@@ -6,9 +6,9 @@ import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 public interface CollectionMapper {
-    int countByExample(CollectionExample example);
+    int countByExample(@Param("example")CollectionExample example);
 
-    int deleteByExample(CollectionExample example);
+    int deleteByExample(@Param("example")CollectionExample example);
 
     int deleteByPrimaryKey(Integer coid);
 
@@ -16,7 +16,7 @@ public interface CollectionMapper {
 
     int insertSelective(Collection record);
 
-    List<Collection> selectByExample(CollectionExample example);
+    List<Collection> selectByExample(@Param("example")CollectionExample example, @Param("first")int first,@Param("max")int max);
 
     Collection selectByPrimaryKey(Integer coid);
 

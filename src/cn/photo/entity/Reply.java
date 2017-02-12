@@ -12,8 +12,18 @@ public class Reply {
     private Integer userid;
 
     private Integer commentid;
+    
+    private Member member;
 
-    public Integer getRid() {
+    public Member getMember() {
+		return member;
+	}
+
+	public void setMember(Member member) {
+		this.member = member;
+	}
+
+	public Integer getRid() {
         return rid;
     }
 

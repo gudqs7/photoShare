@@ -1,2 +1,340 @@
 16:07:05,820  INFO Regist:20 - our num:
 16:09:06,041  INFO Regist:20 - our num:
+11:03:03,188  INFO ClassPathXmlApplicationContext:510 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@68d5c08f: startup date [Sun Feb 12 11:03:03 CST 2017]; root of context hierarchy
+11:03:03,301  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [applicationContext.xml]
+11:03:03,654  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [applicationContext-service.xml]
+11:03:03,748  INFO ClassPathBeanDefinitionScanner:222 - JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+11:03:04,043  INFO PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [jdbc.properties]
+11:03:04,108  INFO DefaultListableBeanFactory:577 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1a84aa66: defining beans [config,dataSource,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txManager,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,pc,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,albumMapper,collectionMapper,commentMapper,goodListMapper,idCardMapper,memberMapper,photoMapper,replyMapper,typeMapper,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+11:03:04,292  INFO DriverManagerDataSource:153 - Loaded JDBC driver: com.mysql.jdbc.Driver
+11:03:38,164  INFO ClassPathXmlApplicationContext:510 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@68d5c08f: startup date [Sun Feb 12 11:03:38 CST 2017]; root of context hierarchy
+11:03:38,280  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [applicationContext.xml]
+11:03:38,595  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [applicationContext-service.xml]
+11:03:38,684  INFO ClassPathBeanDefinitionScanner:222 - JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+11:03:39,037  INFO PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [jdbc.properties]
+11:03:39,109  INFO DefaultListableBeanFactory:577 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7cf27a6e: defining beans [config,dataSource,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txManager,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,pc,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,albumServiceImpl,collectionServiceImpl,commentServiceImpl,goodListServiceImpl,idCardServiceImpl,memberServiceImpl,photoServiceImpl,replyServiceImpl,typeServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,albumMapper,collectionMapper,commentMapper,goodListMapper,idCardMapper,memberMapper,photoMapper,replyMapper,typeMapper,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+11:03:39,283  INFO DriverManagerDataSource:153 - Loaded JDBC driver: com.mysql.jdbc.Driver
+11:04:54,272  INFO ClassPathXmlApplicationContext:510 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@68d5c08f: startup date [Sun Feb 12 11:04:54 CST 2017]; root of context hierarchy
+11:04:54,378  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [applicationContext.xml]
+11:04:54,687  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [applicationContext-service.xml]
+11:04:54,777  INFO ClassPathBeanDefinitionScanner:222 - JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+11:04:55,120  INFO PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [jdbc.properties]
+11:04:55,190  INFO DefaultListableBeanFactory:577 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1adad143: defining beans [config,dataSource,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txManager,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,pc,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,albumServiceImpl,collectionServiceImpl,commentServiceImpl,goodListServiceImpl,idCardServiceImpl,memberServiceImpl,photoServiceImpl,replyServiceImpl,typeServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,albumMapper,collectionMapper,commentMapper,goodListMapper,idCardMapper,memberMapper,photoMapper,replyMapper,typeMapper,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+11:04:55,363  INFO DriverManagerDataSource:153 - Loaded JDBC driver: com.mysql.jdbc.Driver
+11:06:11,144  INFO ClassPathXmlApplicationContext:510 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@68d5c08f: startup date [Sun Feb 12 11:06:11 CST 2017]; root of context hierarchy
+11:06:11,251  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [applicationContext.xml]
+11:06:11,569  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [applicationContext-service.xml]
+11:06:11,663  INFO ClassPathBeanDefinitionScanner:222 - JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+11:06:12,000  INFO PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [jdbc.properties]
+11:06:12,069  INFO DefaultListableBeanFactory:577 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1299d847: defining beans [config,dataSource,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txManager,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,pc,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,albumServiceImpl,collectionServiceImpl,commentServiceImpl,goodListServiceImpl,idCardServiceImpl,memberServiceImpl,photoServiceImpl,replyServiceImpl,typeServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,albumMapper,collectionMapper,commentMapper,goodListMapper,idCardMapper,memberMapper,photoMapper,replyMapper,typeMapper,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+11:06:12,244  INFO DriverManagerDataSource:153 - Loaded JDBC driver: com.mysql.jdbc.Driver
+11:06:14,702 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@3fa27a33]
+11:06:14,708 DEBUG Connection:47 - ==>  Preparing: insert into Member ( nickName, sex, phone, pwd, registTime ) values ( ?, ?, ?, ?, ? ) 
+11:06:14,764 DEBUG PreparedStatement:47 - ==> Parameters: Test_0(String), 男(String), 17673047210(String), pwd0(String), 2017-02-12 11:06:14.312(Timestamp)
+11:06:15,064 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@333770f]
+11:06:15,065 DEBUG Connection:47 - ==>  Preparing: insert into Member ( nickName, sex, phone, pwd, registTime ) values ( ?, ?, ?, ?, ? ) 
+11:06:15,066 DEBUG PreparedStatement:47 - ==> Parameters: Test_1(String), 男(String), 17673047211(String), pwd1(String), 2017-02-12 11:06:14.802(Timestamp)
+11:06:15,350 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@6ce853d1]
+11:06:15,351 DEBUG Connection:47 - ==>  Preparing: insert into Member ( nickName, sex, phone, pwd, registTime ) values ( ?, ?, ?, ?, ? ) 
+11:06:15,352 DEBUG PreparedStatement:47 - ==> Parameters: Test_2(String), 男(String), 17673047212(String), pwd2(String), 2017-02-12 11:06:15.091(Timestamp)
+11:06:15,644 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@297e5cf5]
+11:06:15,644 DEBUG Connection:47 - ==>  Preparing: insert into Member ( nickName, sex, phone, pwd, registTime ) values ( ?, ?, ?, ?, ? ) 
+11:06:15,646 DEBUG PreparedStatement:47 - ==> Parameters: Test_3(String), 男(String), 17673047213(String), pwd3(String), 2017-02-12 11:06:15.38(Timestamp)
+11:06:15,938 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@2aeb0e51]
+11:06:15,939 DEBUG Connection:47 - ==>  Preparing: insert into Member ( nickName, sex, phone, pwd, registTime ) values ( ?, ?, ?, ?, ? ) 
+11:06:15,940 DEBUG PreparedStatement:47 - ==> Parameters: Test_4(String), 男(String), 17673047214(String), pwd4(String), 2017-02-12 11:06:15.672(Timestamp)
+11:06:16,224 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@2af7b740]
+11:06:16,224 DEBUG Connection:47 - ==>  Preparing: insert into Member ( nickName, sex, phone, pwd, registTime ) values ( ?, ?, ?, ?, ? ) 
+11:06:16,226 DEBUG PreparedStatement:47 - ==> Parameters: Test_5(String), 男(String), 17673047215(String), pwd5(String), 2017-02-12 11:06:15.965(Timestamp)
+11:06:16,501 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@3eed9837]
+11:06:16,501 DEBUG Connection:47 - ==>  Preparing: insert into Member ( nickName, sex, phone, pwd, registTime ) values ( ?, ?, ?, ?, ? ) 
+11:06:16,503 DEBUG PreparedStatement:47 - ==> Parameters: Test_6(String), 男(String), 17673047216(String), pwd6(String), 2017-02-12 11:06:16.25(Timestamp)
+11:06:16,792 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@38151ff5]
+11:06:16,793 DEBUG Connection:47 - ==>  Preparing: insert into Member ( nickName, sex, phone, pwd, registTime ) values ( ?, ?, ?, ?, ? ) 
+11:06:16,794 DEBUG PreparedStatement:47 - ==> Parameters: Test_7(String), 男(String), 17673047217(String), pwd7(String), 2017-02-12 11:06:16.527(Timestamp)
+11:06:17,084 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@69f949a0]
+11:06:17,084 DEBUG Connection:47 - ==>  Preparing: insert into Member ( nickName, sex, phone, pwd, registTime ) values ( ?, ?, ?, ?, ? ) 
+11:06:17,085 DEBUG PreparedStatement:47 - ==> Parameters: Test_8(String), 男(String), 17673047218(String), pwd8(String), 2017-02-12 11:06:16.818(Timestamp)
+11:06:17,367 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@6467f9ec]
+11:06:17,367 DEBUG Connection:47 - ==>  Preparing: insert into Member ( nickName, sex, phone, pwd, registTime ) values ( ?, ?, ?, ?, ? ) 
+11:06:17,368 DEBUG PreparedStatement:47 - ==> Parameters: Test_9(String), 男(String), 17673047219(String), pwd9(String), 2017-02-12 11:06:17.111(Timestamp)
+11:07:35,536  INFO ClassPathXmlApplicationContext:510 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@186b480a: startup date [Sun Feb 12 11:07:35 CST 2017]; root of context hierarchy
+11:07:35,646  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [applicationContext.xml]
+11:07:35,977  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [applicationContext-service.xml]
+11:07:36,065  INFO ClassPathBeanDefinitionScanner:222 - JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+11:07:36,408  INFO PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [jdbc.properties]
+11:07:36,478  INFO DefaultListableBeanFactory:577 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@324626db: defining beans [config,dataSource,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txManager,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,pc,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,albumServiceImpl,collectionServiceImpl,commentServiceImpl,goodListServiceImpl,idCardServiceImpl,memberServiceImpl,photoServiceImpl,replyServiceImpl,typeServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,albumMapper,collectionMapper,commentMapper,goodListMapper,idCardMapper,memberMapper,photoMapper,replyMapper,typeMapper,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+11:07:36,662  INFO DriverManagerDataSource:153 - Loaded JDBC driver: com.mysql.jdbc.Driver
+11:09:44,926  INFO ClassPathXmlApplicationContext:510 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@186b480a: startup date [Sun Feb 12 11:09:44 CST 2017]; root of context hierarchy
+11:09:45,055  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [applicationContext.xml]
+11:09:45,396  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [applicationContext-service.xml]
+11:09:45,486  INFO ClassPathBeanDefinitionScanner:222 - JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+11:09:45,840  INFO PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [jdbc.properties]
+11:09:45,920  INFO DefaultListableBeanFactory:577 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6a871b75: defining beans [config,dataSource,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txManager,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,pc,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,albumServiceImpl,collectionServiceImpl,commentServiceImpl,goodListServiceImpl,idCardServiceImpl,memberServiceImpl,photoServiceImpl,replyServiceImpl,typeServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,albumMapper,collectionMapper,commentMapper,goodListMapper,idCardMapper,memberMapper,photoMapper,replyMapper,typeMapper,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+11:09:46,099  INFO DriverManagerDataSource:153 - Loaded JDBC driver: com.mysql.jdbc.Driver
+11:10:10,892  INFO ClassPathXmlApplicationContext:510 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@186b480a: startup date [Sun Feb 12 11:10:10 CST 2017]; root of context hierarchy
+11:10:11,003  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [applicationContext.xml]
+11:10:11,323  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [applicationContext-service.xml]
+11:10:11,410  INFO ClassPathBeanDefinitionScanner:222 - JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+11:10:11,762  INFO PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [jdbc.properties]
+11:10:11,834  INFO DefaultListableBeanFactory:577 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6a871b75: defining beans [config,dataSource,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txManager,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,pc,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,albumServiceImpl,collectionServiceImpl,commentServiceImpl,goodListServiceImpl,idCardServiceImpl,memberServiceImpl,photoServiceImpl,replyServiceImpl,typeServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,albumMapper,collectionMapper,commentMapper,goodListMapper,idCardMapper,memberMapper,photoMapper,replyMapper,typeMapper,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+11:10:12,013  INFO DriverManagerDataSource:153 - Loaded JDBC driver: com.mysql.jdbc.Driver
+11:10:14,587 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@2ca59fc]
+11:10:14,593 DEBUG Connection:47 - ==>  Preparing: select uid, nickName, sex, phone, pwd, registTime from Member limit ?,? 
+11:10:14,638 DEBUG PreparedStatement:47 - ==> Parameters: 0(Integer), 100(Integer)
+11:10:14,704 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@2ca59fc]
+11:10:14,705 DEBUG Connection:47 - ==>  Preparing: select cid, userid, cardno, realname, cardfront, cardverso from IDCard where userid = ? 
+11:10:14,706 DEBUG PreparedStatement:47 - ==> Parameters: 1(Integer)
+11:10:14,731 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@2ca59fc]
+11:10:14,731 DEBUG Connection:47 - ==>  Preparing: select coid, albumid, userid, collectdate from collection where userid = ? 
+11:10:14,732 DEBUG PreparedStatement:47 - ==> Parameters: 1(Integer)
+11:10:14,757 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@2ca59fc]
+11:10:14,758 DEBUG Connection:47 - ==>  Preparing: select aid, userid, albumdesc, photoid, typeid, totallook, totalgood, isopen, addTime from album where userid = ? 
+11:10:14,759 DEBUG PreparedStatement:47 - ==> Parameters: 1(Integer)
+11:10:14,784 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@2ca59fc]
+11:10:14,785 DEBUG Connection:47 - ==>  Preparing: select cid, userid, cardno, realname, cardfront, cardverso from IDCard where userid = ? 
+11:10:14,785 DEBUG PreparedStatement:47 - ==> Parameters: 2(Integer)
+11:10:14,810 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@2ca59fc]
+11:10:14,811 DEBUG Connection:47 - ==>  Preparing: select coid, albumid, userid, collectdate from collection where userid = ? 
+11:10:14,811 DEBUG PreparedStatement:47 - ==> Parameters: 2(Integer)
+11:10:14,835 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@2ca59fc]
+11:10:14,836 DEBUG Connection:47 - ==>  Preparing: select aid, userid, albumdesc, photoid, typeid, totallook, totalgood, isopen, addTime from album where userid = ? 
+11:10:14,836 DEBUG PreparedStatement:47 - ==> Parameters: 2(Integer)
+11:10:14,863 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@2ca59fc]
+11:10:14,864 DEBUG Connection:47 - ==>  Preparing: select cid, userid, cardno, realname, cardfront, cardverso from IDCard where userid = ? 
+11:10:14,864 DEBUG PreparedStatement:47 - ==> Parameters: 3(Integer)
+11:10:14,890 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@2ca59fc]
+11:10:14,891 DEBUG Connection:47 - ==>  Preparing: select coid, albumid, userid, collectdate from collection where userid = ? 
+11:10:14,892 DEBUG PreparedStatement:47 - ==> Parameters: 3(Integer)
+11:10:14,916 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@2ca59fc]
+11:10:14,917 DEBUG Connection:47 - ==>  Preparing: select aid, userid, albumdesc, photoid, typeid, totallook, totalgood, isopen, addTime from album where userid = ? 
+11:10:14,918 DEBUG PreparedStatement:47 - ==> Parameters: 3(Integer)
+11:10:14,943 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@2ca59fc]
+11:10:14,944 DEBUG Connection:47 - ==>  Preparing: select cid, userid, cardno, realname, cardfront, cardverso from IDCard where userid = ? 
+11:10:14,944 DEBUG PreparedStatement:47 - ==> Parameters: 4(Integer)
+11:10:14,970 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@2ca59fc]
+11:10:14,970 DEBUG Connection:47 - ==>  Preparing: select coid, albumid, userid, collectdate from collection where userid = ? 
+11:10:14,971 DEBUG PreparedStatement:47 - ==> Parameters: 4(Integer)
+11:10:14,996 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@2ca59fc]
+11:10:14,996 DEBUG Connection:47 - ==>  Preparing: select aid, userid, albumdesc, photoid, typeid, totallook, totalgood, isopen, addTime from album where userid = ? 
+11:10:14,997 DEBUG PreparedStatement:47 - ==> Parameters: 4(Integer)
+11:10:15,022 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@2ca59fc]
+11:10:15,023 DEBUG Connection:47 - ==>  Preparing: select cid, userid, cardno, realname, cardfront, cardverso from IDCard where userid = ? 
+11:10:15,023 DEBUG PreparedStatement:47 - ==> Parameters: 5(Integer)
+11:10:15,047 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@2ca59fc]
+11:10:15,048 DEBUG Connection:47 - ==>  Preparing: select coid, albumid, userid, collectdate from collection where userid = ? 
+11:10:15,049 DEBUG PreparedStatement:47 - ==> Parameters: 5(Integer)
+11:10:15,073 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@2ca59fc]
+11:10:15,074 DEBUG Connection:47 - ==>  Preparing: select aid, userid, albumdesc, photoid, typeid, totallook, totalgood, isopen, addTime from album where userid = ? 
+11:10:15,075 DEBUG PreparedStatement:47 - ==> Parameters: 5(Integer)
+11:10:15,103 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@2ca59fc]
+11:10:15,104 DEBUG Connection:47 - ==>  Preparing: select cid, userid, cardno, realname, cardfront, cardverso from IDCard where userid = ? 
+11:10:15,104 DEBUG PreparedStatement:47 - ==> Parameters: 6(Integer)
+11:10:15,131 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@2ca59fc]
+11:10:15,132 DEBUG Connection:47 - ==>  Preparing: select coid, albumid, userid, collectdate from collection where userid = ? 
+11:10:15,132 DEBUG PreparedStatement:47 - ==> Parameters: 6(Integer)
+11:10:15,157 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@2ca59fc]
+11:10:15,161 DEBUG Connection:47 - ==>  Preparing: select aid, userid, albumdesc, photoid, typeid, totallook, totalgood, isopen, addTime from album where userid = ? 
+11:10:15,162 DEBUG PreparedStatement:47 - ==> Parameters: 6(Integer)
+11:10:15,187 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@2ca59fc]
+11:10:15,188 DEBUG Connection:47 - ==>  Preparing: select cid, userid, cardno, realname, cardfront, cardverso from IDCard where userid = ? 
+11:10:15,189 DEBUG PreparedStatement:47 - ==> Parameters: 7(Integer)
+11:10:15,213 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@2ca59fc]
+11:10:15,213 DEBUG Connection:47 - ==>  Preparing: select coid, albumid, userid, collectdate from collection where userid = ? 
+11:10:15,214 DEBUG PreparedStatement:47 - ==> Parameters: 7(Integer)
+11:10:15,238 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@2ca59fc]
+11:10:15,238 DEBUG Connection:47 - ==>  Preparing: select aid, userid, albumdesc, photoid, typeid, totallook, totalgood, isopen, addTime from album where userid = ? 
+11:10:15,239 DEBUG PreparedStatement:47 - ==> Parameters: 7(Integer)
+11:10:15,265 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@2ca59fc]
+11:10:15,266 DEBUG Connection:47 - ==>  Preparing: select cid, userid, cardno, realname, cardfront, cardverso from IDCard where userid = ? 
+11:10:15,266 DEBUG PreparedStatement:47 - ==> Parameters: 8(Integer)
+11:10:15,292 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@2ca59fc]
+11:10:15,292 DEBUG Connection:47 - ==>  Preparing: select coid, albumid, userid, collectdate from collection where userid = ? 
+11:10:15,293 DEBUG PreparedStatement:47 - ==> Parameters: 8(Integer)
+11:10:15,317 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@2ca59fc]
+11:10:15,317 DEBUG Connection:47 - ==>  Preparing: select aid, userid, albumdesc, photoid, typeid, totallook, totalgood, isopen, addTime from album where userid = ? 
+11:10:15,318 DEBUG PreparedStatement:47 - ==> Parameters: 8(Integer)
+11:10:15,343 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@2ca59fc]
+11:10:15,344 DEBUG Connection:47 - ==>  Preparing: select cid, userid, cardno, realname, cardfront, cardverso from IDCard where userid = ? 
+11:10:15,344 DEBUG PreparedStatement:47 - ==> Parameters: 9(Integer)
+11:10:15,369 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@2ca59fc]
+11:10:15,370 DEBUG Connection:47 - ==>  Preparing: select coid, albumid, userid, collectdate from collection where userid = ? 
+11:10:15,370 DEBUG PreparedStatement:47 - ==> Parameters: 9(Integer)
+11:10:15,395 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@2ca59fc]
+11:10:15,395 DEBUG Connection:47 - ==>  Preparing: select aid, userid, albumdesc, photoid, typeid, totallook, totalgood, isopen, addTime from album where userid = ? 
+11:10:15,396 DEBUG PreparedStatement:47 - ==> Parameters: 9(Integer)
+11:10:15,420 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@2ca59fc]
+11:10:15,421 DEBUG Connection:47 - ==>  Preparing: select cid, userid, cardno, realname, cardfront, cardverso from IDCard where userid = ? 
+11:10:15,422 DEBUG PreparedStatement:47 - ==> Parameters: 10(Integer)
+11:10:15,447 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@2ca59fc]
+11:10:15,447 DEBUG Connection:47 - ==>  Preparing: select coid, albumid, userid, collectdate from collection where userid = ? 
+11:10:15,448 DEBUG PreparedStatement:47 - ==> Parameters: 10(Integer)
+11:10:15,472 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@2ca59fc]
+11:10:15,472 DEBUG Connection:47 - ==>  Preparing: select aid, userid, albumdesc, photoid, typeid, totallook, totalgood, isopen, addTime from album where userid = ? 
+11:10:15,473 DEBUG PreparedStatement:47 - ==> Parameters: 10(Integer)
+11:11:10,212  INFO ClassPathXmlApplicationContext:510 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2b46950c: startup date [Sun Feb 12 11:11:10 CST 2017]; root of context hierarchy
+11:11:10,331  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [applicationContext.xml]
+11:11:10,651  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [applicationContext-service.xml]
+11:11:10,742  INFO ClassPathBeanDefinitionScanner:222 - JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+11:11:11,085  INFO PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [jdbc.properties]
+11:11:11,158  INFO DefaultListableBeanFactory:577 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3b62bb72: defining beans [config,dataSource,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txManager,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,pc,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,albumServiceImpl,collectionServiceImpl,commentServiceImpl,goodListServiceImpl,idCardServiceImpl,memberServiceImpl,photoServiceImpl,replyServiceImpl,typeServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,albumMapper,collectionMapper,commentMapper,goodListMapper,idCardMapper,memberMapper,photoMapper,replyMapper,typeMapper,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+11:11:11,339  INFO DriverManagerDataSource:153 - Loaded JDBC driver: com.mysql.jdbc.Driver
+11:11:13,926 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@29de3685]
+11:11:13,932 DEBUG Connection:47 - ==>  Preparing: select uid, nickName, sex, phone, pwd, registTime from Member limit ?,? 
+11:11:13,978 DEBUG PreparedStatement:47 - ==> Parameters: 0(Integer), 100(Integer)
+11:11:14,034 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@29de3685]
+11:11:14,034 DEBUG Connection:47 - ==>  Preparing: select cid, userid, cardno, realname, cardfront, cardverso from IDCard where userid = ? 
+11:11:14,035 DEBUG PreparedStatement:47 - ==> Parameters: 1(Integer)
+11:11:14,060 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@29de3685]
+11:11:14,060 DEBUG Connection:47 - ==>  Preparing: select coid, albumid, userid, collectdate from collection where userid = ? 
+11:11:14,061 DEBUG PreparedStatement:47 - ==> Parameters: 1(Integer)
+11:11:14,087 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@29de3685]
+11:11:14,087 DEBUG Connection:47 - ==>  Preparing: select aid, userid, albumdesc, photoid, typeid, totallook, totalgood, isopen, addTime from album where userid = ? 
+11:11:14,088 DEBUG PreparedStatement:47 - ==> Parameters: 1(Integer)
+11:11:14,113 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@29de3685]
+11:11:14,114 DEBUG Connection:47 - ==>  Preparing: select cid, userid, cardno, realname, cardfront, cardverso from IDCard where userid = ? 
+11:11:14,114 DEBUG PreparedStatement:47 - ==> Parameters: 2(Integer)
+11:11:14,139 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@29de3685]
+11:11:14,140 DEBUG Connection:47 - ==>  Preparing: select coid, albumid, userid, collectdate from collection where userid = ? 
+11:11:14,141 DEBUG PreparedStatement:47 - ==> Parameters: 2(Integer)
+11:11:14,168 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@29de3685]
+11:11:14,168 DEBUG Connection:47 - ==>  Preparing: select aid, userid, albumdesc, photoid, typeid, totallook, totalgood, isopen, addTime from album where userid = ? 
+11:11:14,169 DEBUG PreparedStatement:47 - ==> Parameters: 2(Integer)
+11:11:14,195 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@29de3685]
+11:11:14,195 DEBUG Connection:47 - ==>  Preparing: select cid, userid, cardno, realname, cardfront, cardverso from IDCard where userid = ? 
+11:11:14,196 DEBUG PreparedStatement:47 - ==> Parameters: 3(Integer)
+11:11:14,221 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@29de3685]
+11:11:14,222 DEBUG Connection:47 - ==>  Preparing: select coid, albumid, userid, collectdate from collection where userid = ? 
+11:11:14,222 DEBUG PreparedStatement:47 - ==> Parameters: 3(Integer)
+11:11:14,247 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@29de3685]
+11:11:14,247 DEBUG Connection:47 - ==>  Preparing: select aid, userid, albumdesc, photoid, typeid, totallook, totalgood, isopen, addTime from album where userid = ? 
+11:11:14,248 DEBUG PreparedStatement:47 - ==> Parameters: 3(Integer)
+11:11:14,275 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@29de3685]
+11:11:14,275 DEBUG Connection:47 - ==>  Preparing: select cid, userid, cardno, realname, cardfront, cardverso from IDCard where userid = ? 
+11:11:14,276 DEBUG PreparedStatement:47 - ==> Parameters: 4(Integer)
+11:11:14,301 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@29de3685]
+11:11:14,301 DEBUG Connection:47 - ==>  Preparing: select coid, albumid, userid, collectdate from collection where userid = ? 
+11:11:14,302 DEBUG PreparedStatement:47 - ==> Parameters: 4(Integer)
+11:11:14,326 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@29de3685]
+11:11:14,327 DEBUG Connection:47 - ==>  Preparing: select aid, userid, albumdesc, photoid, typeid, totallook, totalgood, isopen, addTime from album where userid = ? 
+11:11:14,327 DEBUG PreparedStatement:47 - ==> Parameters: 4(Integer)
+11:11:14,352 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@29de3685]
+11:11:14,353 DEBUG Connection:47 - ==>  Preparing: select cid, userid, cardno, realname, cardfront, cardverso from IDCard where userid = ? 
+11:11:14,354 DEBUG PreparedStatement:47 - ==> Parameters: 5(Integer)
+11:11:14,379 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@29de3685]
+11:11:14,379 DEBUG Connection:47 - ==>  Preparing: select coid, albumid, userid, collectdate from collection where userid = ? 
+11:11:14,381 DEBUG PreparedStatement:47 - ==> Parameters: 5(Integer)
+11:11:14,405 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@29de3685]
+11:11:14,406 DEBUG Connection:47 - ==>  Preparing: select aid, userid, albumdesc, photoid, typeid, totallook, totalgood, isopen, addTime from album where userid = ? 
+11:11:14,408 DEBUG PreparedStatement:47 - ==> Parameters: 5(Integer)
+11:11:14,436 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@29de3685]
+11:11:14,436 DEBUG Connection:47 - ==>  Preparing: select cid, userid, cardno, realname, cardfront, cardverso from IDCard where userid = ? 
+11:11:14,437 DEBUG PreparedStatement:47 - ==> Parameters: 6(Integer)
+11:11:14,464 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@29de3685]
+11:11:14,465 DEBUG Connection:47 - ==>  Preparing: select coid, albumid, userid, collectdate from collection where userid = ? 
+11:11:14,466 DEBUG PreparedStatement:47 - ==> Parameters: 6(Integer)
+11:11:14,489 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@29de3685]
+11:11:14,490 DEBUG Connection:47 - ==>  Preparing: select aid, userid, albumdesc, photoid, typeid, totallook, totalgood, isopen, addTime from album where userid = ? 
+11:11:14,491 DEBUG PreparedStatement:47 - ==> Parameters: 6(Integer)
+11:11:14,515 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@29de3685]
+11:11:14,516 DEBUG Connection:47 - ==>  Preparing: select cid, userid, cardno, realname, cardfront, cardverso from IDCard where userid = ? 
+11:11:14,516 DEBUG PreparedStatement:47 - ==> Parameters: 7(Integer)
+11:11:14,540 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@29de3685]
+11:11:14,541 DEBUG Connection:47 - ==>  Preparing: select coid, albumid, userid, collectdate from collection where userid = ? 
+11:11:14,541 DEBUG PreparedStatement:47 - ==> Parameters: 7(Integer)
+11:11:14,566 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@29de3685]
+11:11:14,567 DEBUG Connection:47 - ==>  Preparing: select aid, userid, albumdesc, photoid, typeid, totallook, totalgood, isopen, addTime from album where userid = ? 
+11:11:14,568 DEBUG PreparedStatement:47 - ==> Parameters: 7(Integer)
+11:11:14,594 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@29de3685]
+11:11:14,594 DEBUG Connection:47 - ==>  Preparing: select cid, userid, cardno, realname, cardfront, cardverso from IDCard where userid = ? 
+11:11:14,595 DEBUG PreparedStatement:47 - ==> Parameters: 8(Integer)
+11:11:14,620 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@29de3685]
+11:11:14,621 DEBUG Connection:47 - ==>  Preparing: select coid, albumid, userid, collectdate from collection where userid = ? 
+11:11:14,622 DEBUG PreparedStatement:47 - ==> Parameters: 8(Integer)
+11:11:14,646 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@29de3685]
+11:11:14,646 DEBUG Connection:47 - ==>  Preparing: select aid, userid, albumdesc, photoid, typeid, totallook, totalgood, isopen, addTime from album where userid = ? 
+11:11:14,647 DEBUG PreparedStatement:47 - ==> Parameters: 8(Integer)
+11:11:14,671 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@29de3685]
+11:11:14,671 DEBUG Connection:47 - ==>  Preparing: select cid, userid, cardno, realname, cardfront, cardverso from IDCard where userid = ? 
+11:11:14,672 DEBUG PreparedStatement:47 - ==> Parameters: 9(Integer)
+11:11:14,696 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@29de3685]
+11:11:14,697 DEBUG Connection:47 - ==>  Preparing: select coid, albumid, userid, collectdate from collection where userid = ? 
+11:11:14,698 DEBUG PreparedStatement:47 - ==> Parameters: 9(Integer)
+11:11:14,722 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@29de3685]
+11:11:14,723 DEBUG Connection:47 - ==>  Preparing: select aid, userid, albumdesc, photoid, typeid, totallook, totalgood, isopen, addTime from album where userid = ? 
+11:11:14,724 DEBUG PreparedStatement:47 - ==> Parameters: 9(Integer)
+11:11:14,752 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@29de3685]
+11:11:14,753 DEBUG Connection:47 - ==>  Preparing: select cid, userid, cardno, realname, cardfront, cardverso from IDCard where userid = ? 
+11:11:14,754 DEBUG PreparedStatement:47 - ==> Parameters: 10(Integer)
+11:11:14,778 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@29de3685]
+11:11:14,779 DEBUG Connection:47 - ==>  Preparing: select coid, albumid, userid, collectdate from collection where userid = ? 
+11:11:14,780 DEBUG PreparedStatement:47 - ==> Parameters: 10(Integer)
+11:11:14,804 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@29de3685]
+11:11:14,804 DEBUG Connection:47 - ==>  Preparing: select aid, userid, albumdesc, photoid, typeid, totallook, totalgood, isopen, addTime from album where userid = ? 
+11:11:14,805 DEBUG PreparedStatement:47 - ==> Parameters: 10(Integer)
+11:18:30,562  INFO ClassPathXmlApplicationContext:510 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2b46950c: startup date [Sun Feb 12 11:18:30 CST 2017]; root of context hierarchy
+11:18:30,685  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [applicationContext.xml]
+11:18:31,012  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [applicationContext-service.xml]
+11:18:31,101  INFO ClassPathBeanDefinitionScanner:222 - JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+11:18:31,461  INFO PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [jdbc.properties]
+11:18:31,535  INFO DefaultListableBeanFactory:577 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6a871b75: defining beans [config,dataSource,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txManager,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,pc,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,albumServiceImpl,collectionServiceImpl,commentServiceImpl,goodListServiceImpl,idCardServiceImpl,memberServiceImpl,photoServiceImpl,replyServiceImpl,typeServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,albumMapper,collectionMapper,commentMapper,goodListMapper,idCardMapper,memberMapper,photoMapper,replyMapper,typeMapper,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+11:18:31,715  INFO DriverManagerDataSource:153 - Loaded JDBC driver: com.mysql.jdbc.Driver
+11:18:32,469  INFO DefaultListableBeanFactory:444 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6a871b75: defining beans [config,dataSource,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txManager,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,pc,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,albumServiceImpl,collectionServiceImpl,commentServiceImpl,goodListServiceImpl,idCardServiceImpl,memberServiceImpl,photoServiceImpl,replyServiceImpl,typeServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,albumMapper,collectionMapper,commentMapper,goodListMapper,idCardMapper,memberMapper,photoMapper,replyMapper,typeMapper,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+11:18:54,012  INFO ClassPathXmlApplicationContext:510 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2b46950c: startup date [Sun Feb 12 11:18:54 CST 2017]; root of context hierarchy
+11:18:54,120  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [applicationContext.xml]
+11:18:54,434  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [applicationContext-service.xml]
+11:18:54,530  INFO ClassPathBeanDefinitionScanner:222 - JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+11:18:54,879  INFO PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [jdbc.properties]
+11:18:54,951  INFO DefaultListableBeanFactory:577 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6a871b75: defining beans [config,dataSource,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txManager,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,pc,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,albumServiceImpl,collectionServiceImpl,commentServiceImpl,goodListServiceImpl,idCardServiceImpl,memberServiceImpl,photoServiceImpl,replyServiceImpl,typeServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,albumMapper,collectionMapper,commentMapper,goodListMapper,idCardMapper,memberMapper,photoMapper,replyMapper,typeMapper,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+11:18:55,130  INFO DriverManagerDataSource:153 - Loaded JDBC driver: com.mysql.jdbc.Driver
+11:18:55,867  INFO DefaultListableBeanFactory:444 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6a871b75: defining beans [config,dataSource,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txManager,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,pc,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,albumServiceImpl,collectionServiceImpl,commentServiceImpl,goodListServiceImpl,idCardServiceImpl,memberServiceImpl,photoServiceImpl,replyServiceImpl,typeServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,albumMapper,collectionMapper,commentMapper,goodListMapper,idCardMapper,memberMapper,photoMapper,replyMapper,typeMapper,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+11:21:21,312  INFO ClassPathXmlApplicationContext:510 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@18f048dc: startup date [Sun Feb 12 11:21:21 CST 2017]; root of context hierarchy
+11:21:21,435  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [applicationContext.xml]
+11:21:21,788  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [applicationContext-service.xml]
+11:21:21,882  INFO ClassPathBeanDefinitionScanner:222 - JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+11:21:22,239  INFO PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [jdbc.properties]
+11:21:22,311  INFO DefaultListableBeanFactory:577 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@4c1bd4f6: defining beans [config,dataSource,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txManager,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,pc,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,albumServiceImpl,collectionServiceImpl,commentServiceImpl,goodListServiceImpl,idCardServiceImpl,memberServiceImpl,photoServiceImpl,replyServiceImpl,typeServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,albumMapper,collectionMapper,commentMapper,goodListMapper,idCardMapper,memberMapper,photoMapper,replyMapper,typeMapper,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+11:21:22,492  INFO DriverManagerDataSource:153 - Loaded JDBC driver: com.mysql.jdbc.Driver
+11:21:25,194 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@314b0824]
+11:21:25,200 DEBUG Connection:47 - ==>  Preparing: select uid, nickName, sex, phone, pwd, registTime from Member limit ?,? 
+11:21:25,246 DEBUG PreparedStatement:47 - ==> Parameters: 0(Integer), 100(Integer)
+11:22:03,819  INFO ClassPathXmlApplicationContext:510 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@15e6356d: startup date [Sun Feb 12 11:22:03 CST 2017]; root of context hierarchy
+11:22:03,935  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [applicationContext.xml]
+11:22:04,255  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [applicationContext-service.xml]
+11:22:04,348  INFO ClassPathBeanDefinitionScanner:222 - JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+11:22:04,701  INFO PropertyPlaceholderConfigurer:177 - Loading properties file from class path resource [jdbc.properties]
+11:22:04,777  INFO DefaultListableBeanFactory:577 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@641a13c8: defining beans [config,dataSource,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,txManager,txAdvice,org.springframework.aop.config.internalAutoProxyCreator,pc,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,albumServiceImpl,collectionServiceImpl,commentServiceImpl,goodListServiceImpl,idCardServiceImpl,memberServiceImpl,photoServiceImpl,replyServiceImpl,typeServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,albumMapper,collectionMapper,commentMapper,goodListMapper,idCardMapper,memberMapper,photoMapper,replyMapper,typeMapper,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+11:22:04,965  INFO DriverManagerDataSource:153 - Loaded JDBC driver: com.mysql.jdbc.Driver
+11:22:07,687 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@38d87eb2]
+11:22:07,693 DEBUG Connection:47 - ==>  Preparing: select uid, nickName, sex, phone, pwd, registTime from Member limit ?,? 
+11:22:07,738 DEBUG PreparedStatement:47 - ==> Parameters: 0(Integer), 100(Integer)
+11:22:08,195 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@78c0e5f9]
+11:22:08,195 DEBUG Connection:47 - ==>  Preparing: select aid, userid, albumdesc, photoid, typeid, totallook, totalgood, isopen, addTime from album where userid = ? 
+11:22:08,196 DEBUG PreparedStatement:47 - ==> Parameters: 1(Integer)
+11:22:08,483 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@3bdd712a]
+11:22:08,484 DEBUG Connection:47 - ==>  Preparing: select aid, userid, albumdesc, photoid, typeid, totallook, totalgood, isopen, addTime from album where userid = ? 
+11:22:08,484 DEBUG PreparedStatement:47 - ==> Parameters: 2(Integer)
+11:22:08,764 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@47063b1a]
+11:22:08,765 DEBUG Connection:47 - ==>  Preparing: select aid, userid, albumdesc, photoid, typeid, totallook, totalgood, isopen, addTime from album where userid = ? 
+11:22:08,766 DEBUG PreparedStatement:47 - ==> Parameters: 3(Integer)
+11:22:09,043 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@633a7ecf]
+11:22:09,044 DEBUG Connection:47 - ==>  Preparing: select aid, userid, albumdesc, photoid, typeid, totallook, totalgood, isopen, addTime from album where userid = ? 
+11:22:09,045 DEBUG PreparedStatement:47 - ==> Parameters: 4(Integer)
+11:22:09,337 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@3f06f3fb]
+11:22:09,338 DEBUG Connection:47 - ==>  Preparing: select aid, userid, albumdesc, photoid, typeid, totallook, totalgood, isopen, addTime from album where userid = ? 
+11:22:09,339 DEBUG PreparedStatement:47 - ==> Parameters: 5(Integer)
+11:22:09,621 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@59ae5a16]
+11:22:09,621 DEBUG Connection:47 - ==>  Preparing: select aid, userid, albumdesc, photoid, typeid, totallook, totalgood, isopen, addTime from album where userid = ? 
+11:22:09,622 DEBUG PreparedStatement:47 - ==> Parameters: 6(Integer)
+11:22:09,913 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@72ecee58]
+11:22:09,914 DEBUG Connection:47 - ==>  Preparing: select aid, userid, albumdesc, photoid, typeid, totallook, totalgood, isopen, addTime from album where userid = ? 
+11:22:09,914 DEBUG PreparedStatement:47 - ==> Parameters: 7(Integer)
+11:22:10,196 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@6e32684e]
+11:22:10,197 DEBUG Connection:47 - ==>  Preparing: select aid, userid, albumdesc, photoid, typeid, totallook, totalgood, isopen, addTime from album where userid = ? 
+11:22:10,197 DEBUG PreparedStatement:47 - ==> Parameters: 8(Integer)
+11:22:10,476 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@1628d678]
+11:22:10,476 DEBUG Connection:47 - ==>  Preparing: select aid, userid, albumdesc, photoid, typeid, totallook, totalgood, isopen, addTime from album where userid = ? 
+11:22:10,477 DEBUG PreparedStatement:47 - ==> Parameters: 9(Integer)
+11:22:10,758 DEBUG Connection:47 - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@6ad2fe46]
+11:22:10,759 DEBUG Connection:47 - ==>  Preparing: select aid, userid, albumdesc, photoid, typeid, totallook, totalgood, isopen, addTime from album where userid = ? 
+11:22:10,760 DEBUG PreparedStatement:47 - ==> Parameters: 10(Integer)

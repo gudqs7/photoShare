@@ -1,6 +1,7 @@
 package cn.photo.entity;
 
 import java.util.Date;
+import java.util.List;
 
 public class Album {
     private Integer aid;
@@ -15,13 +16,23 @@ public class Album {
 
     private Integer totallook;
 
-    private Integer 相册点赞总数;
+    private Integer totalgood;
 
     private Integer isopen;
 
     private Date addtime;
 
-    public Integer getAid() {
+    private List<GoodList> goods;
+    
+    public List<GoodList> getGoods() {
+		return goods;
+	}
+
+	public void setGoods(List<GoodList> goods) {
+		this.goods = goods;
+	}
+
+	public Integer getAid() {
         return aid;
     }
 
@@ -69,12 +80,12 @@ public class Album {
         this.totallook = totallook;
     }
 
-    public Integer get相册点赞总数() {
-        return 相册点赞总数;
+    public Integer getTotalgood() {
+        return totalgood;
     }
 
-    public void set相册点赞总数(Integer 相册点赞总数) {
-        this.相册点赞总数 = 相册点赞总数;
+    public void setTotalgood(Integer totalgood) {
+        this.totalgood = totalgood;
     }
 
     public Integer getIsopen() {

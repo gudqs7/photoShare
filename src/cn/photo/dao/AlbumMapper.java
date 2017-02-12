@@ -6,9 +6,9 @@ import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 public interface AlbumMapper {
-    int countByExample(AlbumExample example);
+    int countByExample(@Param("example")AlbumExample example);
 
-    int deleteByExample(AlbumExample example);
+    int deleteByExample(@Param("example")AlbumExample example);
 
     int deleteByPrimaryKey(Integer aid);
 
@@ -16,7 +16,7 @@ public interface AlbumMapper {
 
     int insertSelective(Album record);
 
-    List<Album> selectByExample(AlbumExample example);
+    List<Album> selectByExample(@Param("example")AlbumExample example, @Param("first")int first,@Param("max")int max);
 
     Album selectByPrimaryKey(Integer aid);
 

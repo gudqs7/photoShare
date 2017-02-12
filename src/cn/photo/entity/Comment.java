@@ -1,6 +1,7 @@
 package cn.photo.entity;
 
 import java.util.Date;
+import java.util.List;
 
 public class Comment {
     private Integer mid;
@@ -16,8 +17,18 @@ public class Comment {
     private Integer ding;
 
     private Integer cai;
+    
+    private List<Reply> replys;
 
-    public Integer getMid() {
+    public List<Reply> getReplys() {
+		return replys;
+	}
+
+	public void setReplys(List<Reply> replys) {
+		this.replys = replys;
+	}
+
+	public Integer getMid() {
         return mid;
     }
 

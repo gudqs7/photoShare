@@ -475,63 +475,63 @@ public class AlbumExample {
             return (Criteria) this;
         }
 
-        public Criteria and相册点赞总数IsNull() {
-            addCriterion("相册点赞总数 is null");
+        public Criteria andTotalgoodIsNull() {
+            addCriterion("totalgood is null");
             return (Criteria) this;
         }
 
-        public Criteria and相册点赞总数IsNotNull() {
-            addCriterion("相册点赞总数 is not null");
+        public Criteria andTotalgoodIsNotNull() {
+            addCriterion("totalgood is not null");
             return (Criteria) this;
         }
 
-        public Criteria and相册点赞总数EqualTo(Integer value) {
-            addCriterion("相册点赞总数 =", value, "相册点赞总数");
+        public Criteria andTotalgoodEqualTo(Integer value) {
+            addCriterion("totalgood =", value, "totalgood");
             return (Criteria) this;
         }
 
-        public Criteria and相册点赞总数NotEqualTo(Integer value) {
-            addCriterion("相册点赞总数 <>", value, "相册点赞总数");
+        public Criteria andTotalgoodNotEqualTo(Integer value) {
+            addCriterion("totalgood <>", value, "totalgood");
             return (Criteria) this;
         }
 
-        public Criteria and相册点赞总数GreaterThan(Integer value) {
-            addCriterion("相册点赞总数 >", value, "相册点赞总数");
+        public Criteria andTotalgoodGreaterThan(Integer value) {
+            addCriterion("totalgood >", value, "totalgood");
             return (Criteria) this;
         }
 
-        public Criteria and相册点赞总数GreaterThanOrEqualTo(Integer value) {
-            addCriterion("相册点赞总数 >=", value, "相册点赞总数");
+        public Criteria andTotalgoodGreaterThanOrEqualTo(Integer value) {
+            addCriterion("totalgood >=", value, "totalgood");
             return (Criteria) this;
         }
 
-        public Criteria and相册点赞总数LessThan(Integer value) {
-            addCriterion("相册点赞总数 <", value, "相册点赞总数");
+        public Criteria andTotalgoodLessThan(Integer value) {
+            addCriterion("totalgood <", value, "totalgood");
             return (Criteria) this;
         }
 
-        public Criteria and相册点赞总数LessThanOrEqualTo(Integer value) {
-            addCriterion("相册点赞总数 <=", value, "相册点赞总数");
+        public Criteria andTotalgoodLessThanOrEqualTo(Integer value) {
+            addCriterion("totalgood <=", value, "totalgood");
             return (Criteria) this;
         }
 
-        public Criteria and相册点赞总数In(List<Integer> values) {
-            addCriterion("相册点赞总数 in", values, "相册点赞总数");
+        public Criteria andTotalgoodIn(List<Integer> values) {
+            addCriterion("totalgood in", values, "totalgood");
             return (Criteria) this;
         }
 
-        public Criteria and相册点赞总数NotIn(List<Integer> values) {
-            addCriterion("相册点赞总数 not in", values, "相册点赞总数");
+        public Criteria andTotalgoodNotIn(List<Integer> values) {
+            addCriterion("totalgood not in", values, "totalgood");
             return (Criteria) this;
         }
 
-        public Criteria and相册点赞总数Between(Integer value1, Integer value2) {
-            addCriterion("相册点赞总数 between", value1, value2, "相册点赞总数");
+        public Criteria andTotalgoodBetween(Integer value1, Integer value2) {
+            addCriterion("totalgood between", value1, value2, "totalgood");
             return (Criteria) this;
         }
 
-        public Criteria and相册点赞总数NotBetween(Integer value1, Integer value2) {
-            addCriterion("相册点赞总数 not between", value1, value2, "相册点赞总数");
+        public Criteria andTotalgoodNotBetween(Integer value1, Integer value2) {
+            addCriterion("totalgood not between", value1, value2, "totalgood");
             return (Criteria) this;
         }
 

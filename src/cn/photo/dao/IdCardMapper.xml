@@ -11,7 +11,7 @@
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
-      <foreach collection="oredCriteria" item="criteria" separator="or" >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
         <if test="criteria.valid" >
           <trim prefix="(" suffix=")" prefixOverrides="and" >
             <foreach collection="criteria.criteria" item="criterion" >
@@ -70,25 +70,33 @@
   <sql id="Base_Column_List" >
     cid, userid, cardno, realname, cardfront, cardverso
   </sql>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="cn.photo.entity.IdCardExample" >
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="map" >
     select
-    <if test="distinct" >
+    <if test="example.distinct" >
       distinct
     </if>
     <include refid="Base_Column_List" />
     from IDCard
-    <if test="_parameter != null" >
+    <if test="example != null" >
       <include refid="Example_Where_Clause" />
     </if>
-    <if test="orderByClause != null" >
-      order by ${orderByClause}
+    <if test="example.orderByClause != null" >
+      order by ${example.orderByClause}
     </if>
+    limit #{first},#{max}
   </select>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />
     from IDCard
     where cid = #{cid,jdbcType=OTHER}
+  </select>
+  
+  <select id="selectByUid" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from IDCard
+    where userid = #{uid,jdbcType=OTHER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from IDCard
@@ -151,9 +159,9 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="cn.photo.entity.IdCardExample" resultType="java.lang.Integer" >
+  <select id="countByExample" parameterType="map" resultType="java.lang.Integer" >
     select count(*) from IDCard
-    <if test="_parameter != null" >
+    <if test="example != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </select>

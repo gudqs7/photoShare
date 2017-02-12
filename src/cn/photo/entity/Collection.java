@@ -10,8 +10,18 @@ public class Collection {
     private Integer userid;
 
     private Date collectdate;
+    
+    private Album album;
 
-    public Integer getCoid() {
+    public Album getAlbum() {
+		return album;
+	}
+
+	public void setAlbum(Album album) {
+		this.album = album;
+	}
+
+	public Integer getCoid() {
         return coid;
     }
 

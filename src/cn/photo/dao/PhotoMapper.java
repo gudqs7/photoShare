@@ -6,9 +6,9 @@ import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 public interface PhotoMapper {
-    int countByExample(PhotoExample example);
+    int countByExample(@Param("example")PhotoExample example);
 
-    int deleteByExample(PhotoExample example);
+    int deleteByExample(@Param("example")PhotoExample example);
 
     int deleteByPrimaryKey(Integer pid);
 
@@ -16,7 +16,7 @@ public interface PhotoMapper {
 
     int insertSelective(Photo record);
 
-    List<Photo> selectByExample(PhotoExample example);
+    List<Photo> selectByExample(@Param("example")PhotoExample example, @Param("first")int first,@Param("max")int max);
 
     Photo selectByPrimaryKey(Integer pid);
 

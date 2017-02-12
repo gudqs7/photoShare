@@ -17,9 +17,9 @@ public interface MemberMapper {
 
     int insertSelective(Member record);
 
-    List<Member> selectByExample(@Param("example")MemberExample example);
+    List<Member> selectByExample(@Param("example")MemberExample example, @Param("first")int first,@Param("max")int max);
 
-    Member selectByPrimaryKey(@Param("example")MemberExample example, @Param("first")int first,@Param("max")int max);
+    Member selectByPrimaryKey(Integer uid);
 
     int updateByExampleSelective(@Param("record") Member record, @Param("example") MemberExample example);
 

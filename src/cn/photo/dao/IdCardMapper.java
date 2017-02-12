@@ -6,9 +6,9 @@ import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 public interface IdCardMapper {
-    int countByExample(IdCardExample example);
+    int countByExample(@Param("example")IdCardExample example);
 
-    int deleteByExample(IdCardExample example);
+    int deleteByExample(@Param("example")IdCardExample example);
 
     int deleteByPrimaryKey(Integer cid);
 
@@ -16,7 +16,7 @@ public interface IdCardMapper {
 
     int insertSelective(IdCard record);
 
-    List<IdCard> selectByExample(IdCardExample example);
+    List<IdCard> selectByExample(@Param("example")IdCardExample example, @Param("first")int first,@Param("max")int max);
 
     IdCard selectByPrimaryKey(Integer cid);
 

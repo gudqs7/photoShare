@@ -1,6 +1,7 @@
 package cn.photo.entity;
 
 import java.util.Date;
+import java.util.List;
 
 public class Member {
     private Integer uid;
@@ -14,8 +15,45 @@ public class Member {
     private String pwd;
 
     private Date registtime;
+    
+    private IdCard idcard;
+    
+    private List<Collection> collections;
+    
+    private List<Album> albums;
 
-    public Integer getUid() {
+    public List<Album> getAlbums() {
+		return albums;
+	}
+
+	@Override
+	public String toString() {
+		return "Member [uid=" + uid + ", nickname=" + nickname + ", sex=" + sex + ", phone=" + phone + ", pwd=" + pwd
+				+ ", registtime=" + registtime + ", idcard=" + idcard + ", collections=" + collections + ", albums="
+				+ albums + "]";
+	}
+
+	public void setAlbums(List<Album> albums) {
+		this.albums = albums;
+	}
+
+	public IdCard getIdcard() {
+		return idcard;
+	}
+
+	public void setIdcard(IdCard idcard) {
+		this.idcard = idcard;
+	}
+
+	public List<Collection> getCollections() {
+		return collections;
+	}
+
+	public void setCollections(List<Collection> collections) {
+		this.collections = collections;
+	}
+
+	public Integer getUid() {
         return uid;
     }
 
