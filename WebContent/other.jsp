@@ -13,7 +13,6 @@
 <script
 	src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="http://static.geetest.com/static/tools/gt.js"></script>
-
 </head>
 
 <style>
@@ -88,6 +87,20 @@ b {
 	background: #F7F7F7;
 }
 
+.red {
+	color: red;
+}
+
+#phone, #code {
+	position: relative;
+}
+
+#area {
+	border: 1px solid #C8C8C8;
+	border-radius: 5px;
+	background: #F7F7F7;
+}
+
 #notice, #wait {
 	border: 1px solid #C8C8C8;
 	border-radius: 5px;
@@ -124,41 +137,45 @@ b {
 	</div>
 
 	<div id="login">
-		<div align='center' style='margin-top:30px;margin-bottom:70px'>
+		<div align='center' style='margin-top: 30px; margin-bottom: 70px'>
 			<h4>
-				<a class='now jian' href='login.jsp'>登录</a> <b>·</b> <a
-					class='jian' href='register.jsp'>注册</a>
+				<a class='now jian' href='login.jsp'>登录</a> <b>·</b> <a class='jian'
+					href='register.jsp'>注册</a>
 			</h4>
 		</div>
+		<form class="form form-horizontal" onsubmit="return AjaxLogin()"
+			action="#" method="post" id="loginform">
 
+			<div id='area'>
+				<div>
+					<span class="glyphicon glyphicon-user left" style="color: #959595;"></span>
+					<input autocomplete='false' class="top" placeholder="请输入手机号"
+						name="userid" id='phone'>
 
-		<div id='area'>
-			<div>
-				<span class="glyphicon glyphicon-user left" style="color: #959595;"></span>
-				<input required type="tel" class="top" placeholder="请输入手机号"
-					name="userid" id='phone'>
-
+				</div>
+				<div class='line'></div>
+				<div>
+					<span class="glyphicon glyphicon-lock left" style="color: #959595;"></span>
+					<input autocomplete='false' class="foot" placeholder="请输入短信验证码"
+						name="password" id='code'>
+				</div>
 			</div>
-			<div class='line'></div>
-			<div>
-				<span class="glyphicon glyphicon-lock left" style="color: #959595;"></span>
-				<input required type="password" class="foot" placeholder="请输入密码"
-					name="password" id='pwd'>
-			</div>
-		</div>
+
+			<br />
+			<!-- 留着放验证码 -->
+			<div id="embed-captcha"></div>
+			<p id="wait" class="show">正在加载验证码......</p>
+			<p id="notice" class="hide">请先拖动验证码到相应位置</p>
+
+			<br>
+			<button type="button" onclick="send(this)"
+				class="btn btn-block btn-lg btn-success">发送短信验证码</button>
+			<button type="button" id="embed-submit"
+				class="btn btn-block btn-lg btn-primary" data-loading-text="登录中...">
+				登录</button>
+		</form>
 
 		<br />
-		<!-- 留着放验证码 -->
-		<div id="embed-captcha"></div>
-		<p id="wait" class="show">正在加载验证码......</p>
-		<p id="notice" class="hide">请先拖动验证码到相应位置</p>
-
-		<br>
-		<button type="button" id="embed-submit"
-			class="btn btn-block btn-lg btn-primary" data-loading-text="登录中...">
-			登录</button>
-		<a href="other.jsp" class="btn btn-block btn-lg btn-success">
-			通过短信验证码登录 </a> <br />
 	</div>
 
 </body>
@@ -265,42 +282,120 @@ b {
 		}
 	});
 
-	$("#embed-submit")
-			.click(
-					function() {
-						if (!isVefiry) {
-							return;
-						}
-						var that = this;
-						$(that).button("loading");
-						var uname = $("#phone").val();
-						var upwd = $("#pwd").val();
-						if (uname.trim() != '' && upwd.trim() != '') {
-							var data = 'phone=' + uname + '&pwd=' + upwd;
-							var url = '${pageContext.request.contextPath}/login_pwd.do?'
-									+ data;
-							$
-									.getJSON(
-											url,
-											function(rs) {
-												if (rs.flag == 'true') {
-													//alert('登录成功!')
-													location.href = '${pageContext.request.contextPath}/try.html';
-												} else {
-													$("#infoText").text(
-															rs.errormsg);
-													$("#errormsg")
-															.modal("show");
-													name = true;
-												}
-												$(that).button("reset");
-											});
-						} else {
-							$("#infoText").text("用户名或密码不能为空!");
-							$("#errormsg").modal("show");
-							name = false;
-							$(that).button("reset");
-						}
-					});
+	function AjaxLogin(t) {
+
+		if ($("#phone").val().trim() == '') {
+			$("#phone").select();
+			douyidou("#phone")
+			return false;
+		}
+
+		var phonepatten = /^1[3|5|8|7]\d{9}$/;
+		if (!phonepatten.test($("#phone").val().trim())) {
+			$("#phone").select();
+			douyidou("#phone")
+			return false;
+		}
+
+		if ($("#code").val().trim() == '') {
+			$("#code").select();
+			douyidou("#code")
+			return false;
+		}
+		var codepatten = /^\d{0}$/;
+		if (!codepatten.test($("#code").val().trim())) {
+			$("#code").select();
+			douyidou("#code")
+			return false;
+		}
+
+		$(t).button("loading");
+		var data = $("#loginform").serialize();
+		var uname = $("#uname").val();
+		var upwd = $("#upwd").val();
+		if (uname.trim() != '' && upwd.trim() != '') {
+			var url = '${pageContext.request.contextPath}/login.do?' + data;
+			$
+					.getJSON(
+							url,
+							function(rs) {
+								if (rs.flag == 'true') {
+									//alert('登录成功!')
+									location.href = '${pageContext.request.contextPath}/user_list.do';
+								} else {
+									$("#infoText").text(rs.errormsg);
+									$("#errormsg").modal("show");
+									name = true;
+								}
+								$(t).button("reset");
+							});
+		} else {
+			$("#infoText").text("用户名或密码不能为空!");
+			$("#errormsg").modal("show");
+			name = false;
+			$(t).button("reset");
+		}
+		return false;
+	}
+
+	var mills = 60, p;
+	var that;
+
+	function douyidou(selector) {
+		$(selector).animate({
+			right : "14px"
+		}, 50, function() {
+
+			$(selector).animate({
+				right : "-20px"
+			}, 75, function() {
+				$(selector).animate({
+					right : "0px"
+				}, 75, function() {
+					$(selector).animate({
+						right : "14px"
+					}, 50, function() {
+
+						$(selector).animate({
+							right : "-20px"
+						}, 75, function() {
+							$(selector).animate({
+								right : "0px"
+							}, 75, function() {
+
+							})
+						})
+					})
+				})
+			})
+		})
+	}
+
+	function send(t) {
+		if ($("#phone").val().trim() == '') {
+			$("#phone").select();
+			douyidou("#phone")
+			return;
+		}
+		var phonepatten = /^1[3|5|8|7]\d{9}$/;
+		if (!phonepatten.test($("#phone").val().trim())) {
+			$("#phone").select();
+			douyidou("#phone")
+			return;
+		}
+		var that = t;
+		$(t).attr("disabled", 'disabled');
+		$(t).text(mills + ' 秒后重试!');
+		p = setInterval(function() {
+			mills = mills - 1;
+			$(that).text(mills + ' 秒后重试!');
+			if (mills < 1) {
+				$(that).removeAttr('disabled');
+				$(that).text('发送短信验证码');
+				clearInterval(p)
+				mills = 60;
+			}
+		}, 1000)
+	}
 </script>
 </html>

@@ -11,7 +11,6 @@
 	<!-- 启动注解驱动的Spring MVC功能，注册请求url和注解POJO类方法的映射 -->
 	<mvc:annotation-driven />
 	
-	
 	<!-- 启动包扫描功能，以便注册带有@Controller、@Service、@repository、@Component等注解的类成为spring的bean -->
 	<context:component-scan base-package="cn.photo.controller" />
 	
@@ -20,16 +19,5 @@
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver"
 		p:prefix="/WEB-INF/jsp/" p:suffix=".jsp" />
-		
-	<mvc:interceptors>
-		
-		<mvc:interceptor>
-			
-			<mvc:mapping path="/**"/>
-			<bean class="com.guddqs.monkeycomputer.intercept.LoggerIntercept"></bean>
-		</mvc:interceptor>
-		
-	</mvc:interceptors>
-	
 		
 </beans>  
